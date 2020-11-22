@@ -1,0 +1,94 @@
+/* styles */
+/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 2em;
+  line-height: 1.5;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+p {
+  max-width: 65ch;
+}
+
+header, main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: lightcyan;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+code {
+  padding: .25em;
+  background: azure;
+}
+pre {
+  background: azure;
+  padding: 1em;
+}
+pre code {
+  padding: 0;
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.button, button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #f12e45;
+  color: white;
+  border: 1px solid darkred;
+  box-shadow: 2px 2px black;
+  padding: .25em 1em;
+  cursor: pointer;
+}
+
+a.button:hover, button:hover {
+  background-color: pink;
+  color: black;
+}
+
+a.button:active, button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Twilio SMS Demo Setup</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+      h3.complete {
+        background: palegreen;
+      }
+      h3.complete:after {
+        content: '✅'
+      }
+    </style>
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/setup.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Twilio SMS Demo Setup
+      </h1>
+    </header>
+
+    <main>
+      
+      <h2>
+        You're on your way!
+      </h2>
+      
+      <p>
+        We need a few more pieces of information to finish setting up the app. This page will track your progress and show which steps you've completed with a checkmark (✅).
+      </p>
+      
+      <p>
+        This is a basic example of how to use Twilio's SMS API to send texts. To continue, you'll need a developer account from Twilio. Already have one? just continue below.
+      </p>
+      
+      <p>
+        <a href="https://www.twilio.com/try-twilio" target="_blank" class="button">sign up for a twilio account</a>
+      </p>
+      
+      <p>
+        While signing up, you can streamline things by selecting that you write code, you want to "Explore Twilio", and you want to send and recieve SMS messages.
+      </p>
+      
+      <h3 id="your-phone">
+        Your Phone Number
+      </h3>
+      
+      <p>
+        Along the way, they'll ask for a phone number. You'll also enter that phone number into the <code>.env</code> file of this project as the variable <code>YOUR_PHONE_NUMBER</code>. For example, if your phone number is (US) 555-867-5309, you'll put the following in <code>.env</code>:
+      </p>
+      
+      <pre><code># This is the phone number where test messages will be sent.
+# Twilio will have asked you to enter and verify this!
+YOUR_PHONE_NUMBER=<mark>"+15558675309"</mark></code></pre>
+      
+      <p>
+        For your remix to run, you'll also need a few pieces of information from Twilio. You can find them in the <a target="_blank" href="https://www.twilio.com/console">Twilio Developer Console</a>.
+      </p>
+      
+      <h3 id="twilio-phone">
+        Twilio Phone Number
+      </h3>
+      
+      <p>
+        Twilio will provide you a phone number your code can use to send message from. You select via "Get A Trial Number" in the developer console.
+        This also goes into the <code>.env</code> file of this project:
+      </p>
+      
+      <pre><code># find these at https://www.twilio.com/console
+# TWILIO_PHONE_NUMBER=<mark>"+15551234567"</mark>
+# TWILIO_ACCOUNT_SID=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# TWILIO_AUTH_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+</code></pre>
+      
+      <h3 id="credentials">
+        Account Credentials
+      </h3>
+      
+      <p>
+        You'll also need your "Account SID" and "Auth Token", both of which are also in the console. These are secrets, so be sure not to share them with anyone! The values in <code>.env</code> are only visible to the owner of the project, so you can safely paste them there:
+      </p>
+
+      <pre><code># find these at https://www.twilio.com/console
+# TWILIO_PHONE_NUMBER="+15551234567"
+# TWILIO_ACCOUNT_SID=<mark>XXXXXXXXXXXXXXXXXXXXXXXXXXXX</mark>
+# TWILIO_AUTH_TOKEN=<mark>XXXXXXXXXXXXXXXXXXXXXXXXXXXX</mark>
+</code></pre>
+      
+      <h3 id="secret">
+        A Secret!
+      </h3>
+      
+      <p>
+        This app will send an SMS to a phone number, and we don't want just anyone to be able to do that! Pick out a secret phrase or password you can use to make sure only you can send a message from the app, and add it to <code>.env</code>
+      </p>
+
+      <pre><code># let's not let just anyone text you
+SECRET=<mark>XXXXXXXX</mark></code></pre>
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>

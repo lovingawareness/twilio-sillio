@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Twilio SMS Demo</title>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Twilio SMS Demo</h1></header>
+
+    <main>
+      <p>
+        This app is a demo of using Twilio's client library for sending SMS and
+        MMS messages. Because it uses Twilio's trial account functionality, it's
+        limited to sending messages to a fixed number. To try it out for
+        yourself,
+        <a href="https://glitch.com/edit/#!/remix/basic-twilio-sms">remix this app</a>.
+      </p>
+      <h2>SMS (plain text)</h2>
+      <form method="post" action="/sms">
+        <label>
+          Message to send
+          <textarea name="message" placeholder="boop!"></textarea>
+        </label>
+        <label>
+          Secret (from <code>.env</code> file)
+          <input type="password" maxlength="100" name="secret"/>
+        </label>
+        <button>send SMS</button>
+      </form>
+
+      <h2>MMS (with media)</h2>
+      <form method="post" action="/mms">
+        <label>
+          URL of image to send
+          <input type="text" name="media" placeholder="https://demo.twilio.com/owl.png">
+        </label>
+        <label>
+          Text of message to send
+          <input type="text" name="message" placeholder="hoot!">
+        </label>
+        <label>
+          Secret (from <code>.env</code> file)
+          <input type="password" maxlength="100" name="secret"/>
+        </label>
+        <button>send MMS</button>
+      </form>
+      
+      <h3>
+        More Info
+      </h3>
+      <ul>
+        <li><a href="https://www.twilio.com/docs/libraries/node">Twilio node helper library</a></li>
+        <li><a href="https://www.twilio.com/docs/">Twilio developer docs</a></li>
+      </ul>
+    </main>
+
+    <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
